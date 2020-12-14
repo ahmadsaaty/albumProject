@@ -32,6 +32,7 @@
   </style>
   <!-- Custom styles for this template -->
   <link href="album.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="themed-grid-col">
@@ -74,18 +75,19 @@
 
   <main role="main">
 
-    <section class="jumbotron text-center">
+    <section class="jumbotron pt-1 pb-0 text-center">
       <div class="container">
         <h1 class="text-primary"><strong>Countries of the World</strong></h1>
-        <p class="lead text-muted">A collection of the countries of the world along with related capitals, regions,
-          populations, native names and useful links.</p>
+        <p class="lead text-muted">A collection of the countries of the world along with the respective capital, region,
+          population, native name and useful links.</p>
         <p class="text-success">Browse Countries or search for a specific country</p>
         <p>
-          <input id="name" class="form-control input-group-text text-left" type="text" placeholder="Search For Country"
-            list="countryNames">
+          <input id="name" class="form-control input-group-text text-left" type="search"
+            placeholder="Search For Country" aria-label="Search" list="countryNames">
           <datalist id="countryNames"></datalist></input>
-          <button class="btn btn-primary my-2 " onclick=drawCard()>Search</button>
-          <a href="#" class="btn btn-secondary my-2" onclick=reset()>Reset</a>
+          <button type="submit" id="myBtn" class="btn btn-lg btn-outline-primary my-2 col-6 "
+            onclick=drawCard()>Search</button>
+          <button type="reset" class="btn btn-lg btn-outline-danger my-2 col-2" onclick=reset()>Reset</button>
         </p>
       </div>
     </section>

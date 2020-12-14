@@ -135,7 +135,7 @@ function drawCard() {
 
 
           let x = document.createElement("div")
-          x.className = "col-md-4"
+          x.className = "col-12 col-sm-6 col-md-4 col-lg-3"
           let y = content.replace("Cflag", json[i].flag)
           y = y.replace("Cname", json[i].name)
 
@@ -220,7 +220,7 @@ function reset() {
 
 
         let x = document.createElement("div")
-        x.className = "col-md-4"
+        x.className = "col-12 col-sm-6 col-md-4 col-lg-3"
         let y = content.replace("Cflag", json[i].flag)
         y = y.replace("Cname", json[i].name)
 
@@ -246,5 +246,17 @@ function reset() {
 }
 
 
+// Get the input field
+var input = document.getElementById("name");
 
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function (event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("myBtn").click();
+  }
+});
 
